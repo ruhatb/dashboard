@@ -1,38 +1,253 @@
-.App {
-  text-align: center;
+/* App.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app {
+  display: flex;
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.sidebar {
+  width: 60px;
+  background-color: #f7f9fc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.sidebar-item {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #666;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.header {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.header-tabs {
+  margin-top: 10px;
+}
+
+.header-tab {
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  border: none;
+  cursor: pointer;
+}
+
+.header-tab.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.dashboard {
+  padding: 20px;
+  background-color: #f7f9fc;
+  flex: 1;
+}
+
+.dashboard-card {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-card p {
+  margin: 0;
+  color: #666;
+}
+
+.dashboard-card h2 {
+  margin: 0;
+  margin-top: 10px;
+}
+
+.chart {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.chart-placeholder {
+  height: 200px;
+  background-color: #eaeaea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+}
+
+.transactions-history {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.transactions-history table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.transactions-history th,
+.transactions-history td {
+  padding: 10px;
+  border: 1px solid #eaeaea;
+  text-align: left;
+}
+
+.transactions-history th {
+  background-color: #f0f0f0;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content button {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.dropdown-content button:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropdown-button {
+  background-color: #0056b3;
+}
+
+.login {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 100vh;
+}
+
+.login form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login input {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.login button {
+  padding: 10px;
+  background-color: #007bff;
   color: white;
+  border: none;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.home-dashboard {
+  padding: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tabs {
+  margin-bottom: 20px;
+}
+
+.tab {
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.tab.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.card {
+  background-color: #fff;
+  padding: 20px;
+  width: 22%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.chart-container {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.chart {
+  height: 200px;
+  background-color: #eaeaea;
+}
+
+.proxies-container {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
