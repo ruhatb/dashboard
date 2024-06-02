@@ -37,7 +37,7 @@ const Home = () => {
       
       <div className="proxies-container">
         <h3>My Proxies</h3>
-        {/* My Proxies content goes here */}
+       
       </div>
     </div>
   );
